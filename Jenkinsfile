@@ -6,19 +6,12 @@ pipeline {
                 sh '''
                    cd dt-ejb
                    mvn clean verify
-                   '''
-                sh '''
-                   cd Rest
+                   cd ../Rest
                    mvn clean verify
-                   '''
-                sh '''
-                   cd web
+                   cd ../web
                    mvn clean verify
-                   '''
-                sh '''
-                   cd daytrader-eeb
+                   cd ../daytrader-eeb
                    mvn clean verify
-                   '''
              }
         }
     }
