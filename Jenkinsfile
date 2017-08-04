@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'cd dt-ejb'
                 sh 'mvn clean verify'
             }
         }
