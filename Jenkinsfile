@@ -6,6 +6,8 @@ pipeline {
                 sh 'pwd'
                 sh 'ls -la'
                 sh 'cd dt-ejb'
+                sh 'pwd'
+                sh 'ls -la'
                 sh 'mvn clean verify'
             }
         }
