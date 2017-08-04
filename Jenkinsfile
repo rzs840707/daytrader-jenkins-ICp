@@ -4,14 +4,22 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-                    pwd
-                    ls -la
-                    cd dt-ejb
-                    pwd
-                    ls -la
-                    '''
-                sh 'mvn clean verify'
-            }
+                   cd dt-ejb
+                   mvn clean verify
+                   '''
+                sh '''
+                   cd Rest
+                   mvn clean verify
+                   '''
+                sh '''
+                   cd web
+                   mvn clean verify
+                   '''
+                sh '''
+                   cd daytrader-eeb
+                   mvn clean verify
+                   '''
+             }
         }
     }
 }
