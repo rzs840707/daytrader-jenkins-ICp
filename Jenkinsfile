@@ -3,11 +3,13 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
-                sh 'cd dt-ejb'
-                sh 'pwd'
-                sh 'ls -la'
+                sh '''
+                    pwd
+                    ls -la
+                    cd dt-ejb
+                    pwd
+                    ls -la
+                    '''
                 sh 'mvn clean verify'
             }
         }
