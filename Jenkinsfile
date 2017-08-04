@@ -12,6 +12,7 @@ pipeline {
                    mvn clean verify
                    cd ../daytrader-eeb
                    mvn clean verify
+                   '''
              }
         }
     }
