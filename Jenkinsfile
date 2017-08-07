@@ -15,5 +15,12 @@ pipeline {
                    '''
              }
         }
+        stage('deploy') {
+            steps {
+                sh '''
+                    docker login -u admin -p admin master.cfc:8500
+                '''
+            }
+        }
     }
 }
