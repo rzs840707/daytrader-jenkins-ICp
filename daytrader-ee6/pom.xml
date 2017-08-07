@@ -246,7 +246,7 @@
 							</resources> 
 						</configuration> 
 					</execution> 
-					<execution>
+					<!--<execution>
                                                 <id>copy-repo</id>
                                                 <phase>package</phase>
                                                 <goals> <goal>copy-resources</goal> </goals>
@@ -259,7 +259,7 @@
                                                                 </resource>
                                                         </resources>
                                                 </configuration>
-                                        </execution>
+                                        </execution> -->
 				</executions>
 			</plugin>
 
