@@ -46,6 +46,11 @@
         "terminationGracePeriodSeconds": 30,
         "dnsPolicy": "ClusterFirst",
         "securityContext": {},
+        "imagePullSecrets": [
+          {
+            "name": "admin.registrykey"
+          }
+          ],
         "schedulerName": "default-scheduler"
       }
     },
