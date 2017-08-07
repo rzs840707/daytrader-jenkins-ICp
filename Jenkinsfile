@@ -35,6 +35,7 @@ pipeline {
                     kubectl config use-context cfc
                     ls -la
                     kubectl create -f app.json
+                    kubectl create -f service.json
                 '''
             }
         }
