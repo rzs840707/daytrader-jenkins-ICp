@@ -228,12 +228,38 @@
 						</configuration>
 					</execution>
 					<!-- uncomment for docker -->
-					<execution> <id>copy-dockerfile</id> <phase>package</phase> 
-						<goals> <goal>copy-resources</goal> </goals> <configuration> <outputDirectory>${project.build.directory}</outputDirectory> 
-						<resources> <resource> <directory>${project.basedir}/src/main/resources/docker</directory> 
-						<includes> <include>Dockerfile</include> </includes> </resource> </resources> 
+					<execution> 
+						<id>copy-dockerfile</id> 
+						<phase>package</phase> 
+						<goals> 
+							<goal>copy-resources</goal> 
+						</goals> 
+						<configuration> 
+							<outputDirectory>${project.build.directory}</outputDirectory> 
+							<resources> 
+								<resource> 
+									<directory>${project.basedir}/src/main/resources/docker</directory> 
+									<includes> 
+										<include>Dockerfile</include> 
+									</includes> 
+								</resource> 
+							</resources> 
 						</configuration> 
 					</execution> 
+					<execution>
+                                                <id>copy-repo</id>
+                                                <phase>package</phase>
+                                                <goals> <goal>copy-resources</goal> </goals>
+                                                <configuration>
+                                                        <outputDirectory>${project.build.directory}</outputDirectory>
+                                                        <resources>
+                                                                <resource>
+                                                                       <directory>${project.basedir}/src/main/resources/docker</directory>
+                                                                       <includes> <include>repositories.properties</include> </includes>
+                                                                </resource>
+                                                        </resources>
+                                                </configuration>
+                                        </execution>
 				</executions>
 			</plugin>
 
