@@ -10,7 +10,7 @@ pipeline {
                    mvn clean verify
                    cd ../web
                    mvn clean verify
-                   cd ../daytrader-eeb
+                   cd ../daytrader-ee6
                    mvn clean verify
                    '''
              }
