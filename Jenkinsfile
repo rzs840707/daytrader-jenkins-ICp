@@ -33,7 +33,7 @@ pipeline {
                     kubectl config use-context cfc
                     #!/bin/bash
                     echo "checking if wlp-daytrader-jenkins already exists"
-                    if kubeclt describe deployment wlp-daytrader-jenkins; then
+                    if kubectl describe deployment wlp-daytrader-jenkins; then
                         echo "Application already exists, delete first, then create"
                         kubectl delete deployment wlp-daytrader-jenkins
                         kubectl create -f app.json
