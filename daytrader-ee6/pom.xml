@@ -347,7 +347,7 @@
 				</executions> 
 				<configuration> 
 					<dockerDirectory>${project.build.directory}</dockerDirectory> 
-					<imageName>dhvines/${project.artifactId}:${project.version}</imageName> 
+					<imageName>${project.artifactId}:${project.version}</imageName> 
 				</configuration> 
 			</plugin>
 
@@ -365,7 +365,7 @@
             <configuration>
                 <images>
                     <image>
-                        <name>dhvines/${project.artifactId}:${project.version}</name>
+                        <name>${project.artifactId}:${project.version}</name>
                         <alias>${project.artifactId}</alias>
                         <run>
                             <ports>
