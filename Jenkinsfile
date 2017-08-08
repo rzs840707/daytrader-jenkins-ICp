@@ -40,6 +40,7 @@ pipeline {
                     echo "Create application"
                     kubectl create -f app.json
                     echo "Create service"
+                    set +e
                     kubectl create -f service.json                                      
                     echo "finsihed"
                 '''
