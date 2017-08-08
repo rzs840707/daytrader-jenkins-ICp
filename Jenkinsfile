@@ -36,7 +36,6 @@ pipeline {
                     if kubectl describe deployment wlp-daytrader-jenkins; then
                         echo "Application already exists, delete first"
                         kubectl delete deployment wlp-daytrader-jenkins
-                        sleep 120
                     fi
                     echo "Create application"
                     kubectl create -f app.json
