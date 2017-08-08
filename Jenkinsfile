@@ -24,7 +24,7 @@ pipeline {
                     docker push master.cfc:8500/default/daytrader-ee6
                     kubectl config set-cluster cfc --server=https://172.21.20.136:8001 --insecure-skip-tls-verify=true
                     kubectl config set-context cfc --cluster=cfc
-                    kubectl config set-credentials user --username admin --password admin
+                    kubectl config set-credentials user --username=admin --password=admin
                     kubectl config set-context cfc --user=user --namespace=default
                     kubectl config use-context cfc
                     ls -la
