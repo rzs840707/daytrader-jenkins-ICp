@@ -38,9 +38,11 @@ pipeline {
                         kubectl delete deployment wlp-daytrader-jenkins
                         sleep 120
                     fi
-                    echo "New Application, now create"
+                    echo "Create application"
                     kubectl create -f app.json
+                    echo "Create service"
                     kubectl create -f service.json                                      
+                    echo "finsihed"
                 '''
             }
         }
