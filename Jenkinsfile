@@ -11,7 +11,7 @@ pipeline {
                    cd ../web
                    mvn clean install
                    cd ../daytrader-ee6
-                   mvn clean verify
+                   mvn clean verify -Pdocker
                    cd ..
                    '''
              }
@@ -35,6 +35,7 @@ pipeline {
                     echo "checking if wlp-daytrader-jenkins already exists"
                     if kubectl describe deployment wlp-daytrader-jenkins; then
                         echo "Application already exists, delete first"
+                        kubectl delete service wlp-daytrader-jenkins
                         kubectl delete deployment wlp-daytrader-jenkins
                     fi
                     echo "Create application"
@@ -42,7 +43,7 @@ pipeline {
                     echo "Create service"
                     set +e
                     kubectl create -f service.json                                      
-                    echo "finsihed"
+                    echo "finished"
                 '''
             }
         }
